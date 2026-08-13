@@ -1,0 +1,163 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sorry Bestie ❤️</title>
+<style>
+body{margin:0;font-family:Arial,sans-serif;background:linear-gradient(135deg,#fff5f7,#ffe9ef);color:#444}
+.section{min-height:100vh;display:flex;justify-content:center;align-items:center;padding:30px}
+.card{max-width:900px;background:#fff;padding:35px;border-radius:24px;box-shadow:0 10px 30px rgba(0,0,0,.12)}
+.hidden{display:none}
+h1,h2,h3{text-align:center}
+button{padding:14px 26px;border:none;border-radius:30px;font-size:18px;cursor:pointer;margin:10px}
+.yes{background:#ff6b81;color:white}
+.no{background:#f5f5f5}
+.center{text-align:center}
+.heart{position:fixed;bottom:-20px;animation:float 8s linear infinite}
+@keyframes float{from{transform:translateY(0)}to{transform:translateY(-110vh)}}
+li{margin:10px 0}
+</style>
+</head>
+<body>
+
+<div id="intro" class="section">
+<div class="card center">
+<h1>🥺 A Small Question For My Bestie</h1>
+<p>I made this website because there are some things I want to tell you from my heart.</p>
+<h3>Do you want to open it?</h3>
+<button class="yes" onclick="openSite()">💖 Yes, Open It</button>
+<button id="run1" class="no">😤 No, I'm Still Angry</button>
+</div>
+</div>
+
+<div id="main" class="section hidden">
+<div class="card">
+
+<h1>Sorry Bestie ❤️</h1>
+
+<h2>Dear Bestie, I'm Really Sorry 🥺</h2>
+
+<p><b>You are one of the most important people in my life, and seeing you upset because of me hurts more than you know.</b></p>
+
+<div class="center">
+<button class="yes">💌 Read My Heart</button>
+</div>
+
+<h2>My Apology</h2>
+
+<p>
+I know you're angry with me right now, and honestly, I understand why.<br><br>
+
+I never wanted to hurt you. Making you sad was never my intention. If my words or actions caused you pain, I am truly sorry from the bottom of my heart.<br><br>
+
+You are very special to me, and I never want to be the reason for your tears, your sadness, or your disappointment.<br><br>
+
+I don't just see you as a friend—you are my bestie, my favorite person to talk to, and someone whose presence makes even the hardest days feel easier.<br><br>
+
+When nobody else understands me, you listen.<br>
+When I feel down, you make me smile.<br>
+When life gets difficult, you stay by my side.<br><br>
+
+And that's something I will always be grateful for.<br><br>
+
+You are the only bestie I have who has stood with me through so many moments, both good and bad. No matter what situation I find myself in, I know you're someone I can count on.<br><br>
+
+That's why losing your trust or making you upset means so much to me.<br><br>
+
+I miss our conversations.<br>
+I miss our jokes.<br>
+I miss the way we talk about random things for hours.<br>
+Most of all, I miss seeing you happy.
+</p>
+
+<h2>Why You're So Special To Me ❤️</h2>
+
+<ul>
+<li>✨ You always support me when I need someone.</li>
+<li>✨ You make my bad days better.</li>
+<li>✨ You understand me in ways many people don't.</li>
+<li>✨ You have been there during moments when nobody else was.</li>
+<li>✨ You make life brighter just by being yourself.</li>
+<li>✨ Our friendship is something I truly treasure.</li>
+</ul>
+
+<h2>A Little Message From My Heart</h2>
+
+<p>
+If I could go back and change the thing that hurt you, I would do it without thinking twice.<br><br>
+
+Not because I'm afraid of losing a friend, but because I genuinely care about you.<br><br>
+
+You deserve kindness.<br>
+You deserve respect.<br>
+You deserve happiness.<br>
+And you deserve a better version of me.<br><br>
+
+I know one apology can't instantly fix everything, but I hope it shows how much I care about our friendship.<br><br>
+
+No matter how angry you are right now, please remember this:<br><br>
+
+<b>You matter to me.</b><br>
+<b>Your feelings matter to me.</b><br>
+<b>And our friendship matters to me.</b>
+</p>
+
+<h2>One Last Thing... 🥺</h2>
+
+<p>
+Thank you for being there when nobody else was.<br><br>
+
+Thank you for every laugh, every conversation, every piece of advice, and every moment we've shared.<br><br>
+
+I never want a mistake to become bigger than the friendship we built together.<br><br>
+
+So, from the bottom of my heart...
+</p>
+
+<h2>I'm Sorry ❤️</h2>
+<h2>Will You Forgive Me? 🥺</h2>
+
+<div class="center">
+<button class="yes" onclick="forgive()">💖 Yes, I Forgive You</button>
+<button id="run2" class="no">🥺 Let's Talk</button>
+</div>
+
+<h3>Forever Grateful For You ❤️</h3>
+
+<p><i>"No matter how many friends I make in life, you'll always have a special place in my heart because you stayed when you didn't have to."</i></p>
+
+<h2 id="msg" class="center"></h2>
+
+</div>
+</div>
+
+<script>
+function openSite(){
+ document.getElementById('intro').classList.add('hidden');
+ document.getElementById('main').classList.remove('hidden');
+}
+function move(btn){
+ btn.style.position='fixed';
+ btn.style.left=Math.random()*(window.innerWidth-180)+'px';
+ btn.style.top=Math.random()*(window.innerHeight-80)+'px';
+}
+document.getElementById('run1').addEventListener('mouseover',()=>move(document.getElementById('run1')));
+document.getElementById('run2').addEventListener('mouseover',()=>move(document.getElementById('run2')));
+
+function forgive(){
+ document.getElementById('msg').innerHTML='🎉 YAYYY! ❤️ Thank you, Bestie. You have no idea how happy this makes me. 💖 Best Friends Forever 💖';
+}
+
+for(let i=0;i<25;i++){
+ let h=document.createElement('div');
+ h.className='heart';
+ h.innerHTML='❤️';
+ h.style.left=Math.random()*100+'vw';
+ h.style.animationDelay=Math.random()*8+'s';
+ document.body.appendChild(h);
+}
+</script>
+</body>
+</html>
